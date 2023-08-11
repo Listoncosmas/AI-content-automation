@@ -43,7 +43,7 @@ class ShortAutomationUI(AbstractComponentUI):
                 tts_engine.change(tts_engine_change, tts_engine, [eleven_tts, edge_tts])
 
                 useImages = gr.Checkbox(label="Use images", value=True)
-                numImages = gr.Radio([5, 10, 25], value=25, label="Number of images per short", visible=True, interactive=True)
+                numImages = gr.Radio([0, 10, 25], value=25, label="Number of images per short", visible=True, interactive=True)
                 useImages.change(lambda x: gr.update(visible=x), useImages, numImages)
 
                 addWatermark = gr.Checkbox(label="Add watermark")
